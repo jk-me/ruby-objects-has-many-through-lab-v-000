@@ -6,6 +6,10 @@ class Patient
   end 
   def new_appointment(doctor, date)
     a= Appointment.new(self, doctor,date)
+    @appointments << a 
+  end 
+  def doctors
+    self.appointments
 end   
   describe "#new" do
     it "initializes with a name" do
