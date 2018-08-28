@@ -10,7 +10,7 @@ class Artist
   end 
   def new_song(name,genre)
     n=Song.new(name,self,genre)
-    #n.artist=self 
+    n.artist=self 
   end 
   def songs 
     @@all.select {|s| s.artist==self}
