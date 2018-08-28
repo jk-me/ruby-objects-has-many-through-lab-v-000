@@ -1,10 +1,11 @@
 class Patient 
-  attr_accessor :name, :doctor, :date  
+  attr_accessor :name, :appointments
   def initialize(name)
-    @name=name 
+    @name=name
+    @appointments =[]
   end 
   def new_appointment(doctor, date)
-  
+    a= Appointment.new(self, doctor,date)
 end   
   describe "#new" do
     it "initializes with a name" do
