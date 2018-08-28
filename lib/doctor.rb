@@ -1,7 +1,14 @@
-require "spec_helper"
+class Doctor 
+  attr_accessor :name 
+  @@all=[]
+  
+  def initialize(name)
+    @name=name 
+    @@all<< self 
+  end 
+  
 
-describe "Doctor" do
-
+end 
   describe "#name" do
     it "has a name" do
       doctor_who = Doctor.new("The Doctor")
