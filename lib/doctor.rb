@@ -8,6 +8,9 @@ class Doctor
     @appointments=[]
     @patients=[]
   end 
+  def self.all 
+    @@all 
+  end
   def new_appointment(patient, date)
     a=Appointment.new(patient,self,date)
     @appointments << a 
