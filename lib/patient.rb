@@ -1,7 +1,11 @@
-require "spec_helper"
-
-describe "Patient" do
-
+class Patient 
+  attr_accessor :name, :doctor, :date  
+  def initialize(name)
+    @name=name 
+  end 
+  def new_appointment(doctor, date)
+  
+end   
   describe "#new" do
     it "initializes with a name" do
       expect{Patient.new("Devin")}.to_not raise_error
