@@ -13,7 +13,7 @@ class Artist
     n.artist=self 
   end 
   def songs 
-    @@all.select {|s| s.artist==self}
+    Songs.all.select {|s| s.artist==self}
   end 
   def genres 
     self.songs.collect{|s| s.genre}
