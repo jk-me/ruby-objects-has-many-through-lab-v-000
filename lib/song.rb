@@ -7,7 +7,9 @@ class Song
     @genre=genre
     @@all << self 
   end
+  
 end
+
   describe "#new" do
     it "initializes with a name, an artist, and a genre" do
       rap = Genre.new("rap")
@@ -16,7 +18,6 @@ end
       expect{Song.new("Lucifer", jay_z, rap)}.to_not raise_error
     end
   end
-
   describe ".all" do
     it "knows about all song instances" do
       jay_z = Artist.new("Jay-Z")
@@ -27,7 +28,6 @@ end
       expect(Song.all).to include(shrimp)
     end
   end
-
   describe "#genre" do
     it "belongs to a genre" do
       jay_z = Artist.new("Jay-Z")
