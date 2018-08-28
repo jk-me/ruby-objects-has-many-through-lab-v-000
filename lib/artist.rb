@@ -29,7 +29,6 @@ require "spec_helper"
 
 
 describe "Artist" do
-
   describe "#name" do
     it "has a name" do
       jay_z = Artist.new("Jay-Z")
