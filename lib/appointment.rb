@@ -1,6 +1,18 @@
-require "spec_helper"
+class Appointment
+  attr_accessor :patient, :doctor, :date 
+  @@all=[]
+  def initialize(patient,doctor,date)
+    @patient=patient 
+    @doctor=doctor 
+    @date=date 
+    @@all << self 
+  end
+  def self.all 
+    @@all 
+  end 
+  
 
-describe "Appointment" do
+end
 
   describe ".all" do
     it "knows about all appointments that have been created" do
