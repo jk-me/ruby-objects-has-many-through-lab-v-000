@@ -28,7 +28,6 @@ describe "Artist" do
       expect(jay_z.name).to eq("Jay-Z")
     end
   end
-
   describe ".all" do
     it "knows about all artist instances" do
       jay_z = Artist.new("Jay-Z")
@@ -38,7 +37,6 @@ describe "Artist" do
       expect(Artist.all).to include(kendrick)
     end
   end
-
   describe "#new_song" do
     it "given a name and genre, creates a new song associated with that artist" do
       jay_z = Artist.new("Jay-Z")
